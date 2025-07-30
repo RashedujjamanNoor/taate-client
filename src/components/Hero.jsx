@@ -1,5 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import menImg from "../assets/men.png";
+import owmenImg from "../assets/owmen.png";
+import modelsImg from "../assets/models.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,7 +14,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 const Hero = () => {
   return (
-    <div className="h-auto w-auto overflow-hidden bg-secondary">
+    <div className=" overflow-hidden bg-secondary">
       <img src="../" alt="" />
       <Swiper
         spaceBetween={30}
@@ -27,13 +30,13 @@ const Hero = () => {
         className="mySwiper h-auto w-auto"
       >
         <SwiperSlide>
-          <img src="/owmens.png" alt="men" className="h-full w-full" />
+          <img src={menImg} alt="men" className="h-full w-full" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/owmen.jpg" alt="" className="h-full w-full" />
+          <img src={owmenImg} alt="owmen" className="h-full w-full" />
         </SwiperSlide>
         <SwiperSlide className="h-full w-full">
-          <img src="/kid.jpg" alt="" className="h-full w-full object-cover" />
+          <img src={modelsImg} alt="models" className="h-full w-full " />
         </SwiperSlide>
       </Swiper>
     </div>
