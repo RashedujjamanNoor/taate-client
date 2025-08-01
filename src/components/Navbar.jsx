@@ -6,6 +6,24 @@ import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const menuItem = [
+    {
+      title: "HOME",
+    },
+    {
+      title: "MEN",
+    },
+    {
+      title: "WOMEN",
+    },
+    {
+      title: "KIDS",
+    },
+    {
+      title: "NEW_ARRIVALS",
+    },
+  ];
+
   return (
     <div className="bg-secondary ">
       <div className="px-4 flex justify-between items-center py-3">
@@ -13,13 +31,14 @@ const Navbar = () => {
           <img src="/logo.png" alt="logo" className="w-24 h-auto" />
         </div>
         <div className="hidden lg:flex  justify-center font-medium text-primary gap-4 text-lg cursor-pointer">
-          <p className="active:border-b-primary active:border-b-2 ">HOME</p>
-          <p className="active:border-b-primary active:border-b-2">MEN</p>
-          <p className="active:border-b-primary active:border-b-2">WOMEN</p>
-          <p className="active:border-b-primary active:border-b-2">KIDS</p>
-          <p className="active:border-b-primary active:border-b-2">
-            NEW ARRIVALS
-          </p>
+          {menuItem.map((menu, index) => (
+            <p
+              key={index}
+              className="active:border-b-primary active:border-b-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[3px] after:bg-primary after:transition-all after:duration-300 after:rounded-full hover:after:w-full"
+            >
+              {menu.title}
+            </p>
+          ))}
         </div>
         <div className="lg:hidden flex justify-center items-center gap-5">
           <div className="relative lg:hidden">

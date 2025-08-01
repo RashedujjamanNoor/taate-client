@@ -2,20 +2,20 @@ import React from "react";
 
 const TopCategory = () => {
   const data = [
-    { img: "/panjabi", category: "SHIRT" },
-    { img: "/panjabi", category: "PANJABI" },
+    { img: "/shirt.jpg", category: "SHIRT" },
+    { img: "/shirt.jpg", category: "PANJABI" },
 
-    { img: "/panjabi", category: "FASHION TOPS" },
+    { img: "/shirt.jpg", category: "FASHION TOPS" },
 
-    { img: "/panjabi", category: "EXCLUSIVE LAWN" },
-    { img: "/panjabi", category: "POLO & T-SHIRT" },
-    { img: "/panjabi", category: "ETHNIC PIECES" },
-    { img: "/panjabi", category: "KIDS" },
-    { img: "/panjabi", category: "ACCESSORIES" },
+    { img: "/shirt.jpg", category: "EXCLUSIVE LAWN" },
+    { img: "/shirt.jpg", category: "POLO & T-SHIRT" },
+    { img: "/shirt.jpg", category: "ETHNIC PIECES" },
+    { img: "/kid.jpg", category: "KIDS" },
+    { img: "/shirt.jpg", category: "ACCESSORIES" },
   ];
   return (
     <div className="mx-4 lg:mx-6 2xl:mx-8">
-      <h2 className="text-center mt-10 text-xl 2xl:text-4xl font-bold text-primary">
+      <h2 className="text-center mt-10 text-2xl 2xl:text-4xl font-bold text-primary">
         Top Category
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-4  justify-items-center items-center mt-10 gap-4">
@@ -23,7 +23,7 @@ const TopCategory = () => {
           <div key={index}>
             <div className="relative w-full h-auto overflow-hidden group cursor-pointer">
               <img
-                src="/shirt.jpg"
+                src={item.img}
                 alt="shirt"
                 className="w-full h-auto transform duration-900 transition-all ease-in group-hover:scale-105"
               />
