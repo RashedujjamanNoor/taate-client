@@ -15,9 +15,13 @@ const TopCategory = () => {
   ];
   return (
     <div className="mx-4 lg:mx-6 2xl:mx-8">
-      <h2 className="text-center mt-10 text-2xl 2xl:text-4xl font-bold text-primary">
-        Top Category
-      </h2>
+      <div>
+        <fieldset className="border-t-2 border-primary  text-center mt-15">
+          <legend className="px-8 text-center mt-10 text-2xl 2xl:text-4xl font-bold text-primary">
+            TOP CATEGORY
+          </legend>
+        </fieldset>
+      </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-4  justify-items-center items-center mt-10 gap-4">
         {data.map((item, index) => (
           <div key={index}>
@@ -25,7 +29,7 @@ const TopCategory = () => {
               <img
                 src={item.img}
                 alt="shirt"
-                className="w-full h-auto transform duration-900 transition-all ease-in group-hover:scale-105"
+                className="w-full h-auto transform duration-500 transition-all ease-in group-hover:scale-105"
               />
               <p className="absolute z-10 bottom-0 text-center pt-6 pb-4 text-xl md:text-2xl font-bold text-primary drop-shadow-lg w-full h-full">
                 {item.category}

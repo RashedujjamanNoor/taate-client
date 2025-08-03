@@ -2,6 +2,7 @@ import React from "react";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -10,10 +11,18 @@ const Footer = () => {
         <div>
           <h2 className="font-bold text-primary mb-2 text-lg">POLICIES</h2>
           <div className="text-sm font-medium text-gray-800 space-y-1">
-            <p>Delivery Policy</p>
-            <p>Exchange Policy</p>
-            <p>Privacy Policy</p>
-            <p>Safety Advisory</p>
+            <Link className="block" to="/delivery-policy">
+              Delivery Policy
+            </Link>
+            <Link className="block" to="/exchange-policy">
+              Exchange Policy
+            </Link>
+            <Link className="block" to="/privacy-policy">
+              Privacy Policy
+            </Link>
+            <Link className="block" to="/safty-policy">
+              Safety Advisory
+            </Link>
           </div>
         </div>
         <div>
