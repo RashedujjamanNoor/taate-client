@@ -3,26 +3,37 @@ import { FaSearch } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
   const menuItem = [
     {
       title: "HOME",
+      path: "",
     },
     {
       title: "MEN",
+      path: "men",
     },
     {
       title: "WOMEN",
+      path: "women",
     },
     {
       title: "KIDS",
+      path: "kid",
     },
     {
       title: "NEW_ARRIVALS",
+      path: "new-arrival",
     },
   ];
+
+  const hendleMenu = (menu) => {
+    navigate(`/${menu}`);
+  };
 
   return (
     <div className="bg-secondary ">
@@ -33,6 +44,7 @@ const Navbar = () => {
         <div className="hidden lg:flex  justify-center font-medium text-primary gap-4 text-lg cursor-pointer">
           {menuItem.map((menu, index) => (
             <p
+              onClick={() => hendleMenu(menu.path)}
               key={index}
               className="active:border-b-primary active:border-b-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[3px] after:bg-primary after:transition-all after:duration-300 after:rounded-full hover:after:w-full"
             >
