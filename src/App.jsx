@@ -6,6 +6,7 @@ import Devlivery from "./pages/policies/Devlivery";
 import Exchange from "./pages/policies/Exchange";
 import Privacy from "./pages/policies/Privacy";
 import Men from "./pages/Men";
+import LogIn from "./pages/LogIn";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/delivery-policy" element={<Devlivery />} />
             <Route path="/exchange-policy" element={<Exchange />} />
             <Route path="/privacy-policy" element={<Privacy />} />
+            <Route path="/login" element={<LogIn />} />
           </Routes>
         </div>
         <Footer />
